@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kimchi</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 48px;
+        color: #de0013;
+      }
+      h2 {
+        text-align: center;
+        color: #023e92;
+        font-size: 36px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 30px;
+        max-width: 100%;
+      }
+      body {
+        background-position: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+          150deg,
+          rgba(255, 165, 0),
+          rgba(241, 109, 12)
+        );
+      }
+      p {
+        line-height: 2;
+        font-weight: 100;
+      }
+      div {
+        background-color: #e8e4d6;
+        border-radius: 30px;
+        padding: 10px;
+      }
+      .recipe {
+        color: #447eae;
+        text-decoration: none;
+      }
+      .recipe:hover {
+        text-decoration: underline;
+      }
+      .info {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .introduction {
+        color: #e99c4e;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgb(75, 100, 150, 0.5);
+        font-size: 30px;
+        transition: all 500ms ease-in-out;
+        background: #b8d1e8;
+        color: #ed9091;
+      }
+      button:hover {
+        background: #ed9091;
+        color: #b8d1e8;
+        cursor: pointer;
+        border-radius: 100px;
+      }
+      footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="info">
+      <h1>😋Kimchi😋</h1>
+
+      <h2>
+        <em>The National Dish of Korea</em>
+      </h2>
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/934/original/Kimchi.jpg?1623953403"
+        width="400"
+      />
+
+      <p>
+        <span class="introduction">
+          <strong>Kimchi</strong> is a traditional side dish from Korea that has
+          remained popular over history.
+        </span>
+        It is a fermented vegetable made with chili powder, ginger, garlic, and
+        fish sauce. Along with its unique aroma and flavor, eating kimchi comes
+        with many health benefits. This includes a boost of Vitamin A and C,
+        probiotics to promote healthy gut flora, and may reduce heart disease.
+        Kimchi is eaten all year round and recipes are unique to each region. If
+        you're feeling spicy🔥,
+        <a
+          class="recipe"
+          href="https://www.maangchi.com/recipe/tongbaechu-kimchi"
+          target="_blank"
+        >
+          follow this recipe
+        </a>
+        to learn how to make your own kimchi!👍
+        <br />
+        No ingredients? No problem! Click below to find kimchi for sale near
+        you:
+      </p>
+      <button class="delivery-button">👉Try Kimchi Today!👈</button>
+      <hr />
+      <footer>This page was built by Winnie Li✌️</footer>
+    </div>
+    <script>
+      function delivery() {
+        let name = prompt("What is your name?");
+        let location = prompt("Where are you from?");
+        let email = prompt("What is your email?");
+
+        if (name) {
+          alert(
+            "Hang tight, " +
+              name +
+              "! You will be connected with your nearest Kimchi provider!🚀"
+          );
+        } else {
+          alert("Sorry, kimchi is only for humans!🤖");
+        }
+      }
+      let deliveryButton = document.querySelector(".delivery-button");
+      deliveryButton.addEventListener("click", delivery);
+    </script>
+  </body>
+</html>
